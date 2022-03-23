@@ -1,0 +1,73 @@
+{
+    "data": {
+        "location": {
+            "name": "London",
+            "region": "City of London, Greater London",
+            "country": "United Kingdom",
+            "lat": 51.52,
+            "lon": -0.11,
+            "tz_id": "Europe/London",
+            "localtime_epoch": 1648051470,
+            "localtime": "2022-03-23 16:04"
+        },
+        "current": {
+            "last_updated_epoch": 1648047600,
+            "last_updated": "2022-03-23 15:00",
+            "temp_c": 19,
+            "temp_f": 66.2,
+            "is_day": 1,
+            "condition": {
+                "text": "Sunny",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/113.png",
+                "code": 1000
+            },
+            "wind_mph": 4.3,
+            "wind_kph": 6.8,
+            "wind_degree": 90,
+            "wind_dir": "E",
+            "pressure_mb": 1028,
+            "pressure_in": 30.36,
+            "precip_mm": 0,
+            "precip_in": 0,
+            "humidity": 28,
+            "cloud": 0,
+            "feelslike_c": 19,
+            "feelslike_f": 66.2,
+            "vis_km": 10,
+            "vis_miles": 6,
+            "uv": 5,
+            "gust_mph": 6.3,
+            "gust_kph": 10.1
+        }
+    },
+    "status": 200,
+    "statusText": "OK",
+    "headers": {
+        "cache-control": "public, max-age=180",
+        "content-type": "application/json"
+    },
+    "config": {
+        "transitional": {
+            "silentJSONParsing": true,
+            "forcedJSONParsing": true,
+            "clarifyTimeoutError": false
+        },
+        "transformRequest": [
+            null
+        ],
+        "transformResponse": [
+            null
+        ],
+        "timeout": 0,
+        "xsrfCookieName": "XSRF-TOKEN",
+        "xsrfHeaderName": "X-XSRF-TOKEN",
+        "maxContentLength": -1,
+        "maxBodyLength": -1,
+        "headers": {
+            "Accept": "application/json, text/plain, */*"
+        },
+        "method": "get",
+        "url": "http://api.weatherapi.com/v1/current.json?key=e591d9d236f94ef0933154605222303&q=London&aqi=no"
+    },
+    "request": {}
+}

@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { PokedexContextProvider } from './contexts/PokedexContext';
 
 ReactDOM.render(
   <React.StrictMode>
+    <PokedexContextProvider>
+
     <App />
+    </PokedexContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

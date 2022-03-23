@@ -1,0 +1,37 @@
+{
+    "ip": "92.30.192.73",
+    "continent_code": "EU",
+    "continent_name": "Europe",
+    "country_code2": "GB",
+    "country_code3": "GBR",
+    "country_name": "United Kingdom",
+    "country_capital": "London",
+    "state_prov": "England",
+    "district": "Cadishead",
+    "city": "Manchester",
+    "zipcode": "M44 5",
+    "latitude": "53.43289",
+    "longitude": "-2.42150",
+    "is_eu": false,
+    "calling_code": "+44",
+    "country_tld": ".uk",
+    "languages": "en-GB,cy-GB,gd",
+    "country_flag": "https://ipgeolocation.io/static/flags/gb_64.png",
+    "geoname_id": "6952876",
+    "isp": "TalkTalk Communications Limited",
+    "connection_type": "",
+    "organization": "TalkTalk Communications Limited",
+    "currency": {
+        "code": "GBP",
+        "name": "Pound Sterling",
+        "symbol": "£"
+    },
+    "time_zone": {
+        "name": "Europe/London",
+        "offset": 0,
+        "current_time": "2022-03-23 16:34:33.384+0000",
+        "current_time_unix": 1648053273.384,
+        "is_dst": false,
+        "dst_savings": 1
+    }
+}
