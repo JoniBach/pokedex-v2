@@ -121,7 +121,7 @@ export const PokedexContextProvider: FC<ContextProps> = ({ children }) => {
     fetchLocation();
   }, []);
   const weatherString = weather ? weather?.condition?.text : "loading";
-
+console.log(pokedex_data)
   return (
     <PokedexContext.Provider
       value={{

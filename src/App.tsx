@@ -1,22 +1,25 @@
+/* eslint-disable  @typescript-eslint/no-unused-vars */
+import Old from "./pages/old";
+import Main from "./pages/main";
 
-import Old from './pages/old';
-import Main from './pages/main';
+import React from "react";
+import { render } from "react-dom";
+// import { Router, Link, RouteComponentProps } from "@reach/router"
+import { usePokedex } from "./contexts/PokedexContext";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 
-import React from "react"
-import { render } from "react-dom"
-import { Router, Link, RouteComponentProps } from "@reach/router"
-
+const Test = () => {
+  return <div>hi</div>;
+};
 function App() {
-  let Home = (props: RouteComponentProps) => <Main />
-
   return (
     <Router>
-      <Home path="/" />
+      <Routes>
+      <Route path="/" element={ <Main />} />
+      </Routes>
+
     </Router>
-  )
+  );
 }
 
 export default App;
-
-
-

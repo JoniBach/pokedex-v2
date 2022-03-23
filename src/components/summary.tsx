@@ -47,14 +47,14 @@ export const Summary: React.FC<Props> = ({ active }) => {
         Type:
         {pokemonData?.types?.map((d: any) => ` ${d.type.name}`)}
       </Fact>
-      <Fact>Height: {pokemonData?.height} inches</Fact> 
+      <Fact>Height: {pokemonData?.height} inches</Fact>
       <br />
       Moves:
       <Fact>
-
-        {pokemonData?.moves?.map((d: any) => <li>{d.move.name}</li>)}
-
-       </Fact> 
+        {pokemonData?.moves?.map((d: any) => (
+          <li>{d.move.name}</li>
+        ))}
+      </Fact>
     </Container>
   );
 };

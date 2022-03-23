@@ -1,9 +1,15 @@
-import { Link, useLocation } from "@reach/router";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
 import { usePokedex } from "../contexts/PokedexContext";
 import Summary from "./summary";
+
+import {
+  BrowserRouter as Router,
+  Link,
+  useLocation
+} from "react-router-dom";
+
 type Props = {
   rotate?: any;
   children?: any;
@@ -60,11 +66,11 @@ export const Grid: React.FC<Props> = () => {
     }
   };
   const location = useLocation()
-console.log(location)
   return (
     <>
+
    
-      {location.search ? (
+      {location?.search ? (
         <Summary active={location.search.replace('?', '')} />
       ) : (
         <>
@@ -85,6 +91,7 @@ console.log(location)
         </Container>
         </>
       )}
+
     </>
   );
 };
