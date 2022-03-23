@@ -17,7 +17,7 @@ const Clock = () => {
   const MINUTE_MS = 100000;
 
   const clock = () => {
-  const date = new Date();
+    const date = new Date();
 
     const days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     const dd = date.getDate();
@@ -107,15 +107,20 @@ export const PokedexContextProvider: FC<ContextProps> = ({ children }) => {
     //     setLocation(response.data);
     //     fetchWeather(response.data.city)
     //   });
-   
-      setLocation(mockLocation);
-        fetchWeather('london')
-    
-  }
+
+    setLocation(mockLocation);
+    fetchWeather("london");
+  };
+
+  const fetchSpecies = async (url: string) => {
+    console.log(url);
+    const data = await axios.get(url);
+    return data
+  };
   useEffect(() => {
     fetchLocation();
   }, []);
-  const weatherString = weather ? weather?.condition?.text : 'loading'
+  const weatherString = weather ? weather?.condition?.text : "loading";
 
   return (
     <PokedexContext.Provider
@@ -127,6 +132,7 @@ export const PokedexContextProvider: FC<ContextProps> = ({ children }) => {
         locationString: `${location?.city}, ${location?.country_code2}`,
         weather: weather,
         weatherString,
+        fetchSpecies,
       }}
     >
       {children}

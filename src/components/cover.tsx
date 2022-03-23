@@ -3,15 +3,14 @@ import { useState } from "react";
 import styled from "styled-components";
 import { usePokedex } from "../contexts/PokedexContext";
 import Old from "../pages/old";
+import Grid from "./grid";
 
 import Radial from "./radial";
 
-const background = "#68b2cf";
+// const background = "#68b2cf";
+const background = "#fff";
 const borderColour = "#333";
 
-const Container = styled(motion.div)`
-
-`;
 const TopGroup = styled(motion.div)`
   z-index: 10;
 
@@ -25,7 +24,6 @@ const TopGroup = styled(motion.div)`
     0 0.75rem 0.5rem rgba(148, 110, 110, 0.4) inset,
     0 0.25rem 0.5rem 0 #cf4646 inset;
   /* pointer-events: none; */
-
 `;
 const TopShutter = styled(motion.div)``;
 
@@ -85,13 +83,15 @@ const Inside = styled(motion.div)`
   background: ${background};
   width: 100%;
   height: 90%;
-  overflow: scroll;
   height: 90%;
+  overflow: scroll;
 `;
 
 const Content = styled(motion.div)`
   width: 100%;
   z-index: 9999;
+  max-width: 100vw;
+  max-height: 100vh;
 `;
 
 const Head = styled(motion.div)`
@@ -117,7 +117,7 @@ const Head = styled(motion.div)`
 type Props = {};
 
 export const Cover: React.FC<Props> = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(true);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   const { clock, weather, weatherString, location, locationString } =
     usePokedex();
 
@@ -144,23 +144,23 @@ export const Cover: React.FC<Props> = () => {
         <Radial />
 
         <Content>
-          <Old />
+          <Grid />
         </Content>
       </Inside>
-      
-        <BottomShutter
-          animate={isOpen ? "open" : "closed"}
-          variants={variants("90%")}
-        />
-        <TopGroup
-          animate={isOpen ? "open" : "closed"}
-          variants={variants("-90%")}
-        >
-          <TopShutter />
-          <Clasp >
-            <Button onClick={() => setIsOpen(!isOpen)} />
-          </Clasp>
-        </TopGroup>
+
+      <BottomShutter
+        animate={isOpen ? "open" : "closed"}
+        variants={variants("90%")}
+      />
+      <TopGroup
+        animate={isOpen ? "open" : "closed"}
+        variants={variants("-90%")}
+      >
+        <TopShutter />
+        <Clasp>
+          <Button onClick={() => setIsOpen(!isOpen)} />
+        </Clasp>
+      </TopGroup>
     </>
   );
 };

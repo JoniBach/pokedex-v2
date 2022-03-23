@@ -2,15 +2,16 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import Cover from "../components/cover";
 
-const Container = styled(motion.div)`
-`;
+const Container = styled(motion.div)``;
 
 type Props = {};
 
 export const Main: React.FC<Props> = () => {
-  return <Container>
+  return (
+    <Container>
       <Cover />
-  </Container>;
+    </Container>
+  );
 };
 
 export default Main;

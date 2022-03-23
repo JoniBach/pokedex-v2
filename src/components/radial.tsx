@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import styled from "styled-components";
+import Grid from "./grid";
 type Props = {
   rotate?: any;
   children?: any;
